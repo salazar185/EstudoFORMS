@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
             </select>
         </div>
 
-        <!-- MULTIPLAS OPÇÕES -->
+        <!-- MULTIPLAS OPÇÕES - LISTA COM MAIS DE 1 OPÇÃO -->
         <div>
             <label for="items">Selecione os itens desejados:</label>
             <select name="items" multiple>
@@ -68,7 +68,110 @@
                 <input type="text" name="lastname">
             </fieldset>
         </div>
+
+        <!-- INPUT SENHA - TYPE PASSWORD -->
+        <div>
+            <label for="password">Digite a sua senha</label>
+            <input type="password" name="password">
+        </div>
+
+        <!-- DATALIST - FAZ UMA LISTA -->
+        <div>
+            <label for="flavor">Escolha o sabor</label>
+            <input type="text" list="flavors" name="flavor">
+            <datalist id="flavors">
+                <option value="Baunilha"></option>
+                <option value="Morango"></option>
+                <option value="Chocolate"></option>
+                <option value="Abacaxi"></option>
+            </datalist>
+        </div>
+
+        <!-- BOTÃO RADIO - CHECKBOX COM MAIS DE 1 OPÇÃO SIMULTANEA -->
+        <div>
+            <label for="car_model">Escolha o modelo do carro</label>
+            <div class="radio">
+                <input type="radio" value="bmw" name="car_model">
+                <label for="bmw">BMW</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="ferrari" name="car_model">
+                <label for="ferrari">Ferrari</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="porsche" name="car_model">
+                <label for="porsche">Porshe</label>
+            </div>
+        </div>
+
+        <!-- CHECKBOX - CAIXA DE PREENCHIMENTO -->
+        <div>
+            <label for="optionals">Opcionais do carro:</label>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="pneu_grande">
+                <label for="pneu_grande">Pneus grandes</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="turbo">
+                <label for="turbo">Turbo</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="hibrido">
+                <label for="hibrido">Hibrido</label>
+            </div>
+        </div>
+
+        <!-- INPUT DATA - TYPE DATE -->
+        <div>
+            <label for="date">Digite a data</label>
+            <input type="date" name="date">
+        </div>
+
+        <!-- INPUT IMAGEM - TYPE FILE -->
+        <div>
+            <label for="image">Insira a sua imagem</label>
+            <input type="file" name="imagem">
+        </div>
+
+        <!-- INPUT NUMEROS - TYPE NUMBER -->
+        <div>
+            <label for="salary">Quando você ganha?</label>
+            <input type="number" name="salary">
+        </div>
+
+        <!-- INPUT DE EMAIL - TYPE EMAIL -->
+        <div>
+            <label for="email">Digite seu email:</label>
+            <input type="email" name="email">
+        </div>
+
+        <!-- VALUE - COLOCA UM VALOR PADRÃO NO PREENCHIMENTO -->
+        <div>
+            <label for="value">Digite um valor:</label>
+            <input type="text" value="O meu valor é esse" name="value">
+        </div>
         
+        <!-- DISABLED - DESABILITAR A CAIXA DE PREENCHER -->
+        <div>
+            <p>Tente mudar o valor</p>
+            <input type="text" value="Não precisa preencher" disabled>
+        </div>
+
+        <!-- PLACEHOLDER - COLOCA UMA DICA NA CAIXA DE TEXTO PRO USUARIO -->
+        <div>
+            <label for="currentjob">Digite a sua profissão:</label>
+            <input type="text" name="currentjob" placeholder="Coloque a sua profissão aqui">
+        </div>
+
+        <!-- REQUIRED - COLOCA COMO OBRIGATÓRIO O PREENCHIMENTO DE UM CAMPO NA TELA -->
+        <div>
+            <label for="birthday">Digite o ano do seu nascimento</label>
+            <input type="text" placeholder="Digite o ano que você nasceu" required>
+        </div>
+        
+        <!-- LIMPAR OS DADOS DO FORMULARIO -->
+        <input type="reset" value="Limpar">
+
         <!-- ENVIO DE DADOS DO FORM -->
         <input type="submit" value="Enviar">
     </form>
