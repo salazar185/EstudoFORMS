@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Formularios HTML</h2>
+    <!-- PRIMEIRO FORMULARIO / ATRIBUTOS DO FORMULARIO -->
+    <form action="register.php" method="post">
+        <div>
+            <!-- LABEL - ETIQUETA / TYPE - TIPO DO FORMULARIO -->
+            <label>Nome:</label>
+            <input type="text" />
+        </div>   
+        
+        <!-- ATRIBUTO NAME - VARIAVEL ENVIADA ATRAVES DE HTML -->
+        <div>
+            <!-- ATRIBUTO LABEL -->
+            <label>Idade:</label>
+            <input type="text" name="age">
+        </div>
+        <!-- SELECT - CAIXA COM OPÇÕES -->
+        <div>
+            <label for="job">Selecione a sua profissão:</label>
+            <select name="job">
+                <option value="programador">Programador</option>  
+                <option value="engenheiro">Engenheiro</option>  
+                <option value="desenvolvedor">Desenvolvedor</option>
+            </select>
+        </div>
+
+        <!-- ATRIBUTO SELECTED - PRIORIZA A OPÇÃO QUE TEM O ATRIBUTO SELECTED-->
+        <div>
+            <label for="Contract">Você leu os termos do contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+
+        <!-- MULTIPLAS OPÇÕES -->
+        <div>
+            <label for="items">Selecione os itens desejados:</label>
+            <select name="items" multiple>
+                <option value="maca">Maça</option>
+                <option value="arroz">Arroz</option>
+                <option value="carne">Carne</option>
+                <option value="frango">Frango</option>
+            </select>
+        </div>
+
+        <!-- ELEMENTO TEXTAREA - MESMA COISA QUE O TEXTO MAS PERMITE UM CAMPO MAIOR -->
+        <div>
+            <label for="comment">Escreva um comentário aqui:</label>
+            <textarea name="comment"></textarea>
+        </div>
+
+        <!-- FIELDSET E LEGEND - JUNTA TODOS OS INPUTS DENTRO DE UMA LEGEND -->
+        <div>
+            <fieldset>
+                <legend>Preencha as suas informações:</legend>
+                <legend for="firstname">Nome:</legend>
+                <input type="text" name="firstname">
+                <legend for="lastname">Sobrenome:</legend>
+                <input type="text" name="lastname">
+            </fieldset>
+        </div>
+        
+        <!-- ENVIO DE DADOS DO FORM -->
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
